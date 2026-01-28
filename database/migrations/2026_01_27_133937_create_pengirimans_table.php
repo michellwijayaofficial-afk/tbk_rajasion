@@ -27,8 +27,6 @@ class CreatePengirimansTable extends Migration
             $table->date('tgl_pengiriman');
             $table->text('catatan')->nullable();
             $table->timestamps();
-            
-            $table->foreign('pesanan_id')->references('id')->on('pesanans')->onDelete('cascade');
         });
     }
 
