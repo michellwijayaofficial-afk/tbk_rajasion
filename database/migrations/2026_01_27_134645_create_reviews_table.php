@@ -20,9 +20,6 @@ class CreateReviewsTable extends Migration
             $table->integer('rating');
             $table->text('ulasan')->nullable();
             $table->timestamps();
-            
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');
         });
     }
 
